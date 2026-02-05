@@ -6,11 +6,57 @@
     <link rel="stylesheet" href="Style.css">
     <title>MeuAmor</title>
 </head>
+<script>
+function abrirCarta(){
+
+    const tela = document.getElementById("envelopeTela");
+    const envelope = document.querySelector(".envelope");
+
+    envelope.classList.add("abrir");
+
+    setTimeout(() => {
+        tela.style.display = "none";
+        document.getElementById("conteudo").style.display = "block";
+    }, 1300);
+
+}
+</script>
 <body>
-    <body>
-        <div class="box">
-            <p id="Principal">Para: Meu Amor</p>
+
+    <div class="envelopeTela" id="envelopeTela" onclick="abrirCarta()">
+
+        <div class="envelope">
+            <div class="tampa" id="tampa"></div>
+            <div class="corpo"></div>
+            <p class="clique">Clique para abrir</p>
         </div>
-    </body>
+
+    </div>
+    <div class="side left" id="leftSide"></div>
+    <div class="side right" id="rightSide"></div>
+
+
+    <div class="container">
+        <img class="principal" src="fotos/flor2.png" alt="">
+        <p id="Principal">Meu Amor</p>
+        <img class="principal" src="fotos/flor1.png" alt="">
+    </div>
 </body>
+<script>
+const fotosEsquerda = [1,2,3,4,5,6,7,8];
+const fotosDireita = [9,10,11,12,13,14,15,16];
+
+function preencherMosaico(ladoId, listaFotos){
+    const lado = document.getElementById(ladoId);
+
+    listaFotos.forEach(num => {
+        let img = document.createElement("img");
+        img.src = `fotos/img${num}.jpeg`;
+        lado.appendChild(img);
+    });
+}
+
+preencherMosaico("leftSide", fotosEsquerda);
+preencherMosaico("rightSide", fotosDireita);
+</script>
 </html>

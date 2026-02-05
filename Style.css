@@ -13,7 +13,7 @@ body{
 }
 
 #Principal{
-    font-size: 4.5rem;
+    font-size: 4.9rem;
     color: rgb(0, 58, 109);
     margin: 0;
     margin-top: 2rem;
@@ -90,7 +90,7 @@ body{
 .envelopeTela{
     position: fixed;
     inset: 0;
-    background-color: rgb(5, 64, 131);
+    background-color: rgb(2, 61, 128);
     display: flex;
     justify-content: center;
     align-items: center;

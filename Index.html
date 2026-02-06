@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
     <title>MeuAmor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=Kode+Mono:wght@400..700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet">
 </head>
 <script>
 function abrirCarta(){
@@ -20,6 +23,35 @@ function abrirCarta(){
     }, 1300);
 
 }
+</script>
+<script>
+
+function abrirPopup(){
+    document.getElementById("popup").style.display = "flex";
+}
+
+function clicouNao(){
+
+    document.getElementById("mensagemNao").innerText =
+        "Essa opção não existe...";
+
+    document.getElementById("btnNao").style.display = "none";
+
+}
+
+function clicouSim(){
+    document.querySelector(".popupBox").innerHTML = `
+        <span class="fechar" onclick="fecharPopup()">×</span>
+        <img src='fotos/nossoGif.gif' style="width: 500px;">
+        <p style="font-size: 20px;">Uma hora ou outra você iria dizer sim</p>
+    `;
+        
+}
+
+function fecharPopup(){
+    document.getElementById("popup").style.display = "none";
+}
+
 </script>
 <body>
 
@@ -37,10 +69,43 @@ function abrirCarta(){
 
 
     <div class="container">
-        <img class="principal" src="fotos/flor2.png" alt="">
-        <p id="Principal">Meu Amor</p>
-        <img class="principal" src="fotos/flor1.png" alt="">
+        <div class="titulo">
+            <img class="principal" src="fotos/flor2.png" alt="">
+                <p id="Principal">Meu Amor</p>
+            <img class="principal" src="fotos/flor1.png" alt="">
+        </div>
+        <div class="texto">
+            <p> Lorena, <br><br>
+                ㅤVocê é minha maior certeza, meu único amor e quando penso em você eu dou um sorriso sincero, daqueles que raramente dou, algo que eu nunca imaginei fazer. Então eu prometo ser fiel, te amar… calma, ainda não é isso, eu só tô ansiosa. Eu prometo proteger nosso amor, e segurar sua mão em todos os momentos. Eu te espero todos os dias durante o tempo que for preciso.
+                <br><br>
+                Então eu preciso te dizer
+                <br><br>
+                <p>clique aqui --> <a href="#" class="amor" onclick="abrirPopup()">Amor</a></p>
+            </p>
+        </div>
     </div>
+<div class="popupOverlay" id="popup">
+
+    <div class="popupBox">
+
+<span class="fechar" onclick="fecharPopup()">×</span>
+
+        <p class="valentine"">Quer ser minha <span id="valen">valentine</span>?</p> <img style="width: 250px;" src="fotos/eu e a lorena stardew.PNG" alt="">
+
+        <div class="botoes">
+            <button onclick="clicouSim()">Sim</button>
+            <button id="btnNao" onclick="clicouNao()">Não</button>
+        </div>
+
+        <p id="mensagemNao"></p>
+
+    </div>
+
+</div>
+
+
+</div>
+
 </body>
 <script>
 const fotosEsquerda = [1,2,3,4,5,6,7,8];

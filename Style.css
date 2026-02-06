@@ -3,7 +3,15 @@ body{
     margin: 0;
     min-height: 100vh;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+    font-family: "IM Fell DW Pica", serif;    
+}
+
+.texto{
+    font-size: 1.2rem;
+    text-align: start;
+    margin-left: 3rem;
+    max-width: 600px;
 }
 
 .principal{
@@ -13,10 +21,21 @@ body{
 }
 
 #Principal{
-    font-size: 4.9rem;
+    font-size: 5rem;
     color: rgb(0, 58, 109);
     margin: 0;
-    margin-top: 2rem;
+    margin-top: 2.4rem;
+}
+
+.amor{
+    color: #b30021;
+    font-size: 25px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 .container{
@@ -28,7 +47,7 @@ body{
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 4rem;
 }
 
@@ -142,4 +161,93 @@ body{
     color: white;
     font-size: 1.2rem;
     z-index: 3; 
+}
+
+.popupOverlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.popupBox{
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid black;
+    text-align: center;
+    min-width: 300px;
+}
+
+.botoes{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botoes button{
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background: rgb(5, 64, 131);
+    color: white;
+    font-size: 1rem;
+}
+
+.popupBox img{
+    width: 250px;
+    border-radius: 10px;
+}
+
+#mensagemNao{
+    margin-top: 15px;
+    color: rgb(180, 0, 0);
+    font-weight: bold;
+}
+
+.popupBox{
+    position: relative;
+}
+
+.fechar{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.fechar:hover{
+    color: red;
+    transform: scale(1.2);
+}
+
+.valentine{
+    font-size: 2.5rem;
+}
+
+#valen{
+    color: #b30021;
+}
+
+.popup {
+    position: relative;
+    background: pink;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
 }
